@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OperationsWithFiles-Server", "OperationsWithFiles\OperationsWithFiles-Server.csproj", "{B4AF62AC-7D2C-43C7-8866-59F0BEC91FC7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi-OperationsWithFiles-Server", "OperationsWithFiles\WebApi-OperationsWithFiles-Server.csproj", "{B4AF62AC-7D2C-43C7-8866-59F0BEC91FC7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF-Client", "WPF-Client\WPF-Client.csproj", "{4007B67A-960A-4311-BD0A-3A947AA55518}"
 EndProject
