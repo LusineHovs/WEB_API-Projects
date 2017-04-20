@@ -23,7 +23,7 @@ namespace OperationsWithFiles.Controllers
         {
             string path = Path.Combine(@"C:\Testing", name);
             StreamReader sr = File.OpenText(path);
-            string textline = sr.ReadLine();
+            string textline = sr.ReadToEnd();
             sr.Close();
             return textline;
             // bad practice //
@@ -32,9 +32,17 @@ namespace OperationsWithFiles.Controllers
             //return response;
         }
 
+        string directoryPath = @"C:\Testing";
         // POST: api/File
         public void Post([FromBody]string value)
         {
+            if (Directory.GetFiles(directoryPath).Contains(value))
+            {
+                throw new Exception("There is already exist the file with the same name");
+            }
+            string combinedPath = Path.Combine(directoryPath, value);
+            File.Create(combinedPath); 
+
         }
 
         // PUT: api/File/5

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Script.Serialization;
@@ -33,7 +34,7 @@ namespace WPF_Client
         {
             HttpClient client = new HttpClient();
 
-            client.GetAsync(@"http://localhost:58370/api/directory")
+            client.GetAsync(@"http://localhost:1683/api/file")
                 .ContinueWith(response =>
                 {
                     if (response.Exception != null)
@@ -70,7 +71,7 @@ namespace WPF_Client
             HttpClient client = new HttpClient();
 
             // URI-i mej vorpes parameter input e anum textBoxFileName-i mej grvac selectiony //
-            string url = string.Format("http://localhost:58370/api/directory?name={0}", Uri.EscapeDataString(textBoxFileName.Text));
+            string url = string.Format("http://localhost:1683/api/file?name={0}", Uri.EscapeDataString(textBoxFileName.Text));
 
             client.GetAsync(url)
                 .ContinueWith(response =>
@@ -101,15 +102,29 @@ namespace WPF_Client
             textBoxFileName.Text = listOfFiles.SelectedItem.ToString();
         }
 
+
+
         private void Delete_Click(object sender, RoutedEventArgs e)
         {
             HttpClient client = new HttpClient();
-            string url = string.Format("http://localhost:58370/api/directory?name={0}", Uri.EscapeDataString(textBoxFileName.Text));
+            string url = string.Format("http://localhost:1683/api/file?name={0}", Uri.EscapeDataString(textBoxFileName.Text));
 
             client.DeleteAsync(url);
 
+           // listOfFiles.ItemsSource = 
+
         }
 
-        
+        private void Createnew_Click(object sender, RoutedEventArgs e)
+        {
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("http://localhost:1683/");
+
+            client.DefaultRequestHeaders.Accept.Add(
+               new MediaTypeWithQualityHeaderValue("application/json"));
+
+           // var response = client.PostAsJsonAsync()
+            var response = client.PostAsJsonAsync("api/room", textBoxFileName.Text);
+        }
     }
 }

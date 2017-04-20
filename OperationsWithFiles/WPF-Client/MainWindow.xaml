@@ -47,7 +47,7 @@
         <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="2" Margin="3">
             <Button Content="Update File Content" Name="UpdateFile" Padding="2" VerticalAlignment="Center" Margin="0, 0, 0, 0"></Button>
             <Button Content="Delete File" Name="Delete" Padding="2" VerticalAlignment="Center" Margin="10, 0, 0, 0" Click="Delete_Click" ></Button>
-            <Button Content="Create New File" Name="Createnew" Padding="2" VerticalAlignment="Center" Margin="10, 0, 0, 0"></Button>
+            <Button Content="Create New File" Name="Createnew" Padding="2" VerticalAlignment="Center" Margin="10, 0, 0, 0" Click="Createnew_Click"></Button>
 
         </StackPanel>
 
