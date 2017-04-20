@@ -8,7 +8,7 @@
         Title="MainWindow" Height="350" Width="525">
     <Grid Margin="3" >
         <Grid.Background>
-            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionColorKey}}"/>
+            <SolidColorBrush Color="YellowGreen" />
         </Grid.Background>
 
         <Grid.ColumnDefinitions>
@@ -23,11 +23,11 @@
             <RowDefinition Height="170*" />
         </Grid.RowDefinitions>
 
-        <Button Content="Browse File&#10;From Directory" Name="GetAllFiles"  Padding="3" VerticalAlignment="Center" Margin="5"  FontWeight="Medium" FontSize="14" Click="GetAllFiles_Click" />
+        <Button Content="Browse Files&#10;from Directory" Name="GetAllFiles"  Padding="3" VerticalAlignment="Center" Margin="5"  FontWeight="Medium" FontSize="14" Click="GetAllFiles_Click" />
 
 
         <ListBox Name="listOfFiles"   Margin="3"  Grid.Column="1" Grid.Row="0"      
-                 Height="90" Width="370"
+                 Height="90" Width="370" Background="Beige"
                  SelectionChanged="selectionEvent">
         </ListBox>
 
@@ -36,7 +36,7 @@
 
 
         <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="1" Margin="3">
-            <TextBox Name="textBoxFileName" Width="200" Height="25" VerticalAlignment="Center"  ></TextBox>
+            <TextBox Name="textBoxFileName" Width="200" Height="25" VerticalAlignment="Center" Background="Beige" ></TextBox>
             <Button Content="Open File Content " Name="buttonGetByName" VerticalAlignment="Center" Padding="2" Margin="15, 0, 0, 0" Click="buttonGetByName_Click" ></Button>
         </StackPanel>
 
@@ -51,7 +51,7 @@
 
         </StackPanel>
 
-        <TextBox Name="textBoxFileContent" TextWrapping="Wrap" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Margin="3"></TextBox>
+        <TextBox Name="textBoxFileContent" TextWrapping="Wrap" Grid.Column="1" Grid.Row="4" Background="Beige" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Margin="3"></TextBox>
 
 
     </Grid>
