@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OperationsWithFiles-Server", "OperationsWithFiles\OperationsWithFiles-Server.csproj", "{B4AF62AC-7D2C-43C7-8866-59F0BEC91FC7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF-Client", "WPF-Client\WPF-Client.csproj", "{4007B67A-960A-4311-BD0A-3A947AA55518}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B4AF62AC-7D2C-43C7-8866-59F0BEC91FC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4AF62AC-7D2C-43C7-8866-59F0BEC91FC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4AF62AC-7D2C-43C7-8866-59F0BEC91FC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4AF62AC-7D2C-43C7-8866-59F0BEC91FC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4007B67A-960A-4311-BD0A-3A947AA55518}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4007B67A-960A-4311-BD0A-3A947AA55518}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4007B67A-960A-4311-BD0A-3A947AA55518}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4007B67A-960A-4311-BD0A-3A947AA55518}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
